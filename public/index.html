@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/tabulator_simple.css">
+    <link rel="stylesheet" href="./css/nice-select2.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Plumbing Authority ServiceTitan</title>
+</head>
+
+<body>
+    <h3>Welcome to the ServiceTitan App Plumbing Authority Edition</h3>
+    <p>This returns all of the estimates that were created between the start and end date and have not been sold (have
+        a status "open").</p>
+    <div id="login-area">
+        <input type="text" id="tenant-id" placeholder="Tenant ID">
+        <input type="text" id="client-id" placeholder="Client ID">
+        <input type="text" id="client-secret" placeholder="Client Secret">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <div id="loading-spinner" style="display:none;">
+        <p id="loading-text">Loading...</p>
+        <div class="spinner"></div>
+
+    </div>
+
+
+    <div id="app-area">
+        <div id="dates">
+            <div class="date-input">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" value="2025-01-01">
+            </div>
+            <div class="date-input">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" value="2025-01-31">
+            </div>
+        </div>
+
+
+        <button id="fetch-btn">Get</button><button id="download-csv">Download CSV</button>
+
+
+        <div id="table">
+
+        </div>
+
+    </div>
+
+
+    <script src="./js/tabulator.min.js"></script>
+    <script src="./js/nice-select2.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
